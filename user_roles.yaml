@@ -1,0 +1,8 @@
+---
+- hosts: My_Group
+  become: yes
+  tasks:
+    - name: pull jenkins image
+      community.docker.docker_image:
+        name: avastmick/ansible-jenkins
+        source: pull
