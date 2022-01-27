@@ -29,7 +29,10 @@
         update_cache: yes
 
     - name: add userpermissions
-      shell: "usermod -aG docker ubuntu"
+      user:
+        name: ubuntu
+        groups: docker
+        append: yes
 
     - name: install python package manager
       apt:
