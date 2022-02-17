@@ -1,0 +1,7 @@
+---
+- hosts: My_Group
+  become: yes
+  tasks:
+    - name: install python3-docker
+      apt: name=python3-docker update_cache=yes
+      become: yes

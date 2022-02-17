@@ -1,0 +1,9 @@
+---
+- hosts: My_Group
+  become: yes
+  tasks:
+    - include: installJava11.yaml
+    - include: installDocker.yaml
+    - include: installPython3Docker.yaml
+    - include: createJenkinsImage.yaml
+    - include: createContainerWithJenkins.yaml
