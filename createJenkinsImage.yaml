@@ -3,6 +3,6 @@
   become: yes
   tasks:
     - name: pull jenkins image
-      community.docker.docker_image:
+      docker_image:
         name: jenkins:2.60.3-alpine
         source: pull
